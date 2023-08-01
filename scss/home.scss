@@ -50,7 +50,7 @@ main {
       }
     }
     .s-cursos {
-      width: 30%;
+      width: 40rem;
       height: 90%;
       margin-top: 3rem;
       background-color: rgb(230, 230, 242);
@@ -77,6 +77,7 @@ main {
             padding: 2rem;
             background-color: #f1f3f5;
             width: 30rem;
+            max-width: 30rem;
             border-radius: 1rem;
             color: $letterhome;
             font-family: "Poppins", sans-serif;
