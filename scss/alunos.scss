@@ -1,0 +1,202 @@
+@import "reset";
+@import "colors";
+@import "grid";
+@import "header";
+@import "navbar";
+
+nav {
+  position: fixed;
+}
+
+main {
+  .container {
+    bottom: unset;
+    .filter {
+      margin-bottom: 2rem;
+      form {
+        display: flex;
+        background: #e6e6f2;
+        background: #e6e6f2;
+        margin: 0 2.8rem;
+        border-radius: 1rem;
+        height: 10rem;
+        justify-content: space-around;
+        align-items: center;
+        .nome,
+        .curso {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          max-width: 30rem;
+        }
+        label {
+          font-family: "Inter", sans-serif;
+          font-size: 1.5rem;
+          font-weight: 400;
+          line-height: 2.4rem; /* 120% */
+          letter-spacing: 0.02rem;
+          text-align: left;
+          color: $letterhome;
+        }
+        input {
+          border: 1px solid #e6e6f0;
+          padding: 0.5rem;
+          background-color: $white;
+          width: 100%;
+          max-width: 30rem;
+          border-radius: 1rem;
+          color: #585364;
+          font-family: "Poppins", sans-serif;
+          font-size: 1.5rem;
+          font-weight: 400;
+          line-height: 2.8rem;
+          letter-spacing: 0.02rem;
+          text-align: left;
+          transition: 0.3s all;
+        }
+        button {
+          padding: 0.5rem 2rem;
+          background-color: rgb(241, 243, 245);
+          width: 100%;
+          max-width: 20rem;
+          border-radius: 1rem;
+          color: $letterhome;
+          font-family: "Poppins", sans-serif;
+          font-size: 2rem;
+          font-weight: 400;
+          line-height: 2.8rem; /* 120% */
+          letter-spacing: 0.02rem;
+          text-align: center;
+          transition: 0.3s all;
+          margin-top: 2rem;
+          &:hover {
+            background-color: $cor1;
+            color: $white;
+          }
+        }
+      }
+    }
+    h1 {
+      margin: 2rem;
+      position: relative;
+      font-family: "Poppins", sans-serif;
+      font-size: 3.5rem;
+      font-weight: 400;
+      line-height: 2.4rem; /* 120% */
+      letter-spacing: 0.02rem;
+      text-align: center;
+      color: $letterhome;
+    }
+    .table-head,
+    .tbody {
+      background: #e6e6f2;
+      margin: 0 2.8rem;
+      display: flex;
+      border-radius: 10rem;
+      height: 6.3rem;
+      justify-content: space-around;
+      align-items: center;
+
+      p {
+        color: #6e6893;
+        font-family: "Inter", sans-serif;
+        font-size: 1.3067rem;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0.0653rem;
+        &:first-child {
+          margin-left: 5rem;
+        }
+      }
+    }
+
+    table,
+    th,
+    td {
+      padding: 1rem;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    .table {
+      height: 90vh;
+      background-color: #e6e6f2;
+      backdrop-filter: blur(7px);
+      // box-shadow: 0 .4rem .8rem #0005;
+      border-radius: 1rem;
+      margin: 0 3rem;
+      overflow: hidden;
+    }
+    .table_header {
+      width: 100%;
+      height: 10%;
+      background-color: #fff4;
+      padding: 0.8rem 1rem;
+    }
+    .table-body {
+      width: 95%;
+      max-height: calc(89% - 0.8rem);
+      background-color: #fffb;
+      margin: 0.8rem auto;
+      border-radius: 0.6rem;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        width: 0.5rem;
+        height: 0.5rem;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 0.5rem;
+        background-color: #0004;
+        visibility: hidden;
+        &:hover {
+          visibility: visible;
+        }
+      }
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      left: 0;
+      background-color: #d5d1defe;
+      font-family: "Inter", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 2.4rem; /* 120% */
+      letter-spacing: 0.02rem;
+      text-align: left;
+      color: $letterhome;
+    }
+    td {
+      font-family: "Inter", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 2.4rem; /* 120% */
+      letter-spacing: 0.02rem;
+      text-align: left;
+      color: $letterhome;
+      img{
+        width: 100%;
+        max-width: 2rem;
+        &:first-child{
+          margin-right: 1rem;
+        }
+      }
+    }
+    tr {
+      transition: all 0.3s;
+      &:nth-child(even) {
+        background-color: #0000000b;
+      }
+      &:hover {
+        background-color: #d5d1defe;
+      }
+    }
+
+    table {
+      width: 100%;
+    }
+    .table {
+      margin-top: 2rem;
+    }
+  }
+}
