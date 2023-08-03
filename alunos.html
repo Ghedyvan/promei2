@@ -132,11 +132,15 @@
                     <td> 1 </td>
                     <td> Ghedyvan Vinícius Batista da Silva </td>
                     <td> Programação Web </td>
-                    <td> 20/02/2022 </td>
+                    <td> 20/02/202s2 </td>
                     <td> 80 horas </td>
                     <td>
-                      <button><img src="./img/fi-rr-user.svg" alt=""></button>
-                      <button><img src="./img/fi-rr-file-add.svg" alt=""></button>
+                      <button class="abrirModal"><img src="./img/fi-rr-user.svg" alt=""></button>
+                      <!-- <button><img src="./img/fi-rr-file-add.svg" alt=""></button> -->
+                      <label class="file-upload">
+                        <img src="./img/fi-rr-file-add.svg" alt="Botão com Imagem">
+                        <input type="file" class="file-input">
+                      </label>
                     </td>
                   </tr>
                   <tr>
@@ -146,8 +150,11 @@
                     <td> 03/11/2022 </td>
                     <td> 25 horas </td>
                     <td>
-                      <button><img src="./img/fi-rr-user.svg" alt=""></button>
-                      <button><img src="./img/fi-rr-file-add.svg" alt=""></button>
+                      <button class="abrirModal"><img src="./img/fi-rr-user.svg" alt=""></button>
+                      <label class="file-upload">
+                        <img src="./img/fi-rr-file-add.svg" alt="Botão com Imagem">
+                        <input type="file" class="file-input">
+                      </label>
                     </td>
                   </tr>
                   <tr>
@@ -157,16 +164,106 @@
                     <td> 12/04/2023 </td>
                     <td> 4 horas </td>
                     <td>
-                      <button><img src="./img/fi-rr-user.svg" alt=""></button>
-                      <button><img src="./img/fi-rr-file-add.svg" alt=""></button>
+                      <button class="abrirModal"><img src="./img/fi-rr-user.svg" alt=""></button>
+                      <label class="file-upload">
+                        <img src="./img/fi-rr-file-add.svg" alt="Botão com Imagem">
+                        <input type="file" class="file-input">
+                      </label>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </section>
           </div>
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="fecharModal()">&times;</span>
+                <h2>Informações do Usuário</h2>
+                <table>
+                    <tr>
+                        <td>Nome</td>
+                        <td>Ghedyvan Vinícius Batista da Silva</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>gvbs@ic.ufal.br</td>
+                    </tr>
+                    <tr>
+                        <td>Telefone</td>
+                        <td>(82) 98237-1442</td>
+                    </tr>
+                    <tr>
+                        <td>Idade</td>
+                        <td>22 anos</td>
+                    </tr>
+                    <tr>
+                        <td>Data de Nascimento</td>
+                        <td>20/02/2001</td>
+                    </tr>
+                    <tr>
+                        <td>Nome da Mãe</td>
+                        <td>Fulana fulana fulana</td>
+                    </tr>
+                    <tr>
+                        <td>Endereço</td>
+                        <td>Lot. Rui Palmeira, 579</td>
+                    </tr>
+                    <tr>
+                        <td>CPF</td>
+                        <td>123.456.789-00</td>
+                    </tr>
+                    <tr>
+                        <td>RG</td>
+                        <td>987654321</td>
+                    </tr>
+                    <tr>
+                        <td>Experiência</td>
+                        <td>Sim</td>
+                    </tr>
+                    <tr>
+                      <td>Comprovante de residência</td>
+                      <td>
+                          <button onclick="baixarDocumento('documento1.pdf')">Aperte para baixar</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Foto RG</td>
+                      <td>
+                          <button onclick="baixarDocumento('documento1.pdf')">Aperte para baixar</button>
+                      </td>
+                    </tr>
+                </table>
+            </div>
+          </div>
+          </div>
         </div>
       </div>
     </main>
   </body>
-</html>
+  <script>
+    // Referências aos elementos do DOM
+    const modal = document.querySelector('.modal');
+    const abrirModalBtn = document.querySelectorAll('.abrirModal');
+    const closeBtn = modal.querySelector('.close');
+
+    // Mostrar o modal ao clicar no botão "Detalhes"
+    abrirModalBtn.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            modal.style.display = 'block';
+        });
+    });
+
+    // Fechar o modal ao clicar no botão de fechar (X)
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    // Fechar o modal se o usuário clicar fora da área do modal
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+  </script>
+
+  </html>

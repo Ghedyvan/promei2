@@ -135,8 +135,12 @@
                     <td> 20/02/2022 </td>
                     <td> 80 horas </td>
                     <td>
-                      <button><img src="./img/fi-rr-user.svg" alt=""></button>
-                      <button><img src="./img/fi-rr-checkbox.svg" alt=""></button>
+                      <button class="btn detalhes-btn">
+                        <img src="./img/fi-rr-user.svg" alt="" />
+                      </button>
+                      <button class="btn confirmar-btn">
+                        <img src="./img/fi-rr-checkbox.svg" alt="" />
+                      </button>
                     </td>
                   </tr>
                   <tr>
@@ -146,8 +150,12 @@
                     <td> 03/11/2022 </td>
                     <td> 25 horas </td>
                     <td>
-                      <button><img src="./img/fi-rr-user.svg" alt=""></button>
-                      <button><img src="./img/fi-rr-checkbox.svg" alt=""></button>
+                      <button class="btn detalhes-btn">
+                        <img src="./img/fi-rr-user.svg" alt="" />
+                      </button>
+                      <button class="btn confirmar-btn">
+                        <img src="./img/fi-rr-checkbox.svg" alt="" />
+                      </button>
                     </td>
                   </tr>
                   <tr>
@@ -157,16 +165,150 @@
                     <td> 12/04/2023 </td>
                     <td> 4 horas </td>
                     <td>
-                      <button><img src="./img/fi-rr-user.svg" alt=""></button>
-                      <button><img src="./img/fi-rr-checkbox.svg" alt=""></button>
+                      <button class="btn detalhes-btn">
+                        <img src="./img/fi-rr-user.svg" alt="" />
+                      </button>
+                      <button class="btn confirmar-btn">
+                        <img src="./img/fi-rr-checkbox.svg" alt="" />
+                      </button>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </section>
           </div>
-        </div>
+          <!-- Modal de Confirmação -->
+          <div class="modal modal-confirmacao">
+            <div class="modal-content">
+              <h2>Confirmar Inscrição</h2>
+              <p>Você tem certeza de que deseja confirmar essa inscrição?</p>
+              <div class="botoes">
+                <button class="btn cancelar">Cancelar</button>
+              <button class="btn confirmar-inscricao">Confirmar</button>
+              </div>
+              
+            </div>
+          </div>
+          <!-- Modal de perfil -->
+          <div class="modal modal-detalhes">
+            <div class="modal-content">
+              <span class="close" onclick="fecharModal()">&times;</span>
+              <h2>Informações do Usuário</h2>
+              <table>
+                  <tr>
+                      <td>Nome</td>
+                      <td>Ghedyvan Vinícius Batista da Silva</td>
+                  </tr>
+                  <tr>
+                      <td>Email</td>
+                      <td>gvbs@ic.ufal.br</td>
+                  </tr>
+                  <tr>
+                      <td>Telefone</td>
+                      <td>(82) 98237-1442</td>
+                  </tr>
+                  <tr>
+                      <td>Idade</td>
+                      <td>22 anos</td>
+                  </tr>
+                  <tr>
+                      <td>Data de Nascimento</td>
+                      <td>20/02/2001</td>
+                  </tr>
+                  <tr>
+                      <td>Nome da Mãe</td>
+                      <td>Fulana fulana fulana</td>
+                  </tr>
+                  <tr>
+                      <td>Endereço</td>
+                      <td>Lot. Rui Palmeira, 579</td>
+                  </tr>
+                  <tr>
+                      <td>CPF</td>
+                      <td>123.456.789-00</td>
+                  </tr>
+                  <tr>
+                      <td>RG</td>
+                      <td>987654321</td>
+                  </tr>
+                  <tr>
+                      <td>Experiência</td>
+                      <td>Sim</td>
+                  </tr>
+                  <tr>
+                    <td>Comprovante de residência</td>
+                    <td>
+                        <button onclick="baixarDocumento('documento1.pdf')">Aperte para baixar</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Foto RG</td>
+                    <td>
+                        <button onclick="baixarDocumento('documento1.pdf')">Aperte para baixar</button>
+                    </td>
+                  </tr>
+              </table>
+          </div>
+          </div>    
       </div>
     </main>
   </body>
+  <script>
+    // Referências aos elementos do DOM
+    const modais = document.querySelectorAll(".modal");
+    const detalhesBtns = document.querySelectorAll(".detalhes-btn");
+    const confirmarBtns = document.querySelectorAll(".confirmar-btn");
+    const closeBtns = document.querySelectorAll(".close");
+    const confirmarInscricaoBtns = document.querySelectorAll(
+      ".confirmar-inscricao"
+    );
+    const cancelarBtns = document.querySelectorAll(".cancelar");
+
+    // Função para abrir modal
+    function abrirModal(modal) {
+      modal.style.display = "block";
+    }
+
+    // Função para fechar modal
+    function fecharModal(modal) {
+      modal.style.display = "none";
+    }
+
+    // Mostrar modal de confirmação ao clicar no botão "Confirmar Inscrição"
+    confirmarBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        abrirModal(modais[0]); // Modal de confirmação
+      });
+    });
+
+    // Fechar o modal de confirmação ao clicar no botão "Cancelar"
+    cancelarBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        fecharModal(modais[0]); // Modal de confirmação
+      });
+    });
+
+    // Mostrar o modal de detalhes ao clicar no botão "Detalhes"
+    detalhesBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        abrirModal(modais[1]); // Modal de detalhes
+      });
+    });
+
+    // Fechar o modal ao clicar no botão de fechar (X)
+    closeBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        fecharModal(modais[1]); // Modal de detalhes
+      });
+    });
+
+    // Fechar os modais se o usuário clicar fora da área dos modais
+    window.addEventListener("click", function (event) {
+      modais.forEach(function (modal) {
+        if (event.target === modal) {
+          fecharModal(modal);
+        }
+      });
+    });
+  </script>
 </html>
