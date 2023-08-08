@@ -73,6 +73,9 @@ main {
         margin: 2rem 4rem;
         font-family: "Inter", sans-serif;
         font-size: 3rem;
+        @media (min-height: 860px) {
+          margin-top: 7rem;
+        }
       }
       ul {
         width: 100%;
@@ -100,6 +103,15 @@ main {
             &:hover {
               background-color: $cor1;
               color: $white;
+            }
+            @media (min-height: 860px) {
+              height: 9rem;
+            }
+            @media (min-height: 1000px) {
+              margin-top: 4rem;
+            }
+            @media (min-height: 860px) {
+              height: 11rem;
             }
           }
         }
