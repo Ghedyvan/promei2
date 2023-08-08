@@ -14,10 +14,19 @@ main {
       max-width: 67%;
       display: flex;
       flex-wrap: wrap;
+      height: 90%;
+      align-items: center;
+      justify-content: center;
+      li {
+        height: 25%;
+        @media (min-width: 1825px) {
+          height: 40%;
+        }
+      }
       // justify-content: left;
       .card-01 {
         background-color: $white;
-        height: 12.2rem;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -48,6 +57,7 @@ main {
           }
         }
       }
+      
     }
     .s-cursos {
       width: 40rem;
@@ -86,8 +96,8 @@ main {
             line-height: 2.8rem; /* 120% */
             letter-spacing: 0.02rem;
             text-align: center;
-            transition: .3s all;
-            &:hover{
+            transition: 0.3s all;
+            &:hover {
               background-color: $cor1;
               color: $white;
             }
