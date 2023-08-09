@@ -157,6 +157,9 @@
                       <button class="btn confirmar-btn">
                         <img src="./img/fi-rr-checkbox.svg" alt="" />
                       </button>
+                      <button class="btn negar-btn">
+                        <img src="./img/x.svg" alt="" />
+                      </button>
                     </td>
                   </tr>
                   <tr>
@@ -171,6 +174,9 @@
                       </button>
                       <button class="btn confirmar-btn">
                         <img src="./img/fi-rr-checkbox.svg" alt="" />
+                      </button>
+                      <button class="btn negar-btn">
+                        <img src="./img/x.svg" alt="" />
                       </button>
                     </td>
                   </tr>
@@ -187,6 +193,9 @@
                       <button class="btn confirmar-btn">
                         <img src="./img/fi-rr-checkbox.svg" alt="" />
                       </button>
+                      <button class="btn negar-btn">
+                        <img src="./img/x.svg" alt="" />
+                      </button>
                     </td>
                   </tr>
                 </tbody>
@@ -198,6 +207,17 @@
             <div class="modal-content">
               <h2>Confirmar Inscrição</h2>
               <p>Você tem certeza de que deseja confirmar essa inscrição?</p>
+              <div class="botoes">
+                <button class="btn cancelar">Cancelar</button>
+              <button class="btn confirmar-inscricao">Confirmar</button>
+              </div>
+              
+            </div>
+          </div>
+          <div class="modal modal-negacao">
+            <div class="modal-content">
+              <h2>Rejeitar Inscrição</h2>
+              <p>Você tem certeza de que deseja REJEITAR essa inscrição?</p>
               <div class="botoes">
                 <button class="btn cancelar">Cancelar</button>
               <button class="btn confirmar-inscricao">Confirmar</button>
@@ -274,9 +294,13 @@
     const modais = document.querySelectorAll(".modal");
     const detalhesBtns = document.querySelectorAll(".detalhes-btn");
     const confirmarBtns = document.querySelectorAll(".confirmar-btn");
+    const negarBtns = document.querySelectorAll(".negar-btn");
     const closeBtns = document.querySelectorAll(".close");
     const confirmarInscricaoBtns = document.querySelectorAll(
       ".confirmar-inscricao"
+    );
+    const negarInscricaoBtns = document.querySelectorAll(
+      ".negar-inscricao"
     );
     const cancelarBtns = document.querySelectorAll(".cancelar");
 
@@ -297,6 +321,12 @@
       });
     });
 
+    negarBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        abrirModal(modais[1]); // Modal de negação
+      });
+    });
+
     // Fechar o modal de confirmação ao clicar no botão "Cancelar"
     cancelarBtns.forEach(function (btn) {
       btn.addEventListener("click", function () {
@@ -304,10 +334,17 @@
       });
     });
 
+    cancelarBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        fecharModal(modais[1]); // Modal de confirmação
+      });
+    });
+
+
     // Mostrar o modal de detalhes ao clicar no botão "Detalhes"
     detalhesBtns.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        abrirModal(modais[1]); // Modal de detalhes
+        abrirModal(modais[2]); // Modal de detalhes
       });
     });
 
@@ -315,6 +352,18 @@
     closeBtns.forEach(function (btn) {
       btn.addEventListener("click", function () {
         fecharModal(modais[1]); // Modal de detalhes
+      });
+    });
+
+    closeBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        fecharModal(modais[0]); // Modal de detalhes
+      });
+    });
+
+    closeBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        fecharModal(modais[2]); // Modal de detalhes
       });
     });
 
