@@ -1,20 +1,16 @@
 nav {
-  // PROVISORIO
   width: 10rem;
   border-radius: 6rem;
-  // FIM PROVISORIO
   background-color: $cor1;
   position: absolute;
-  // width: 10rem;
   height: 94%;
   margin-left: 2.4rem;
   top: 2rem;
-  // border-radius: 13rem;
   z-index: 1;
-  a{
+  a {
     margin-bottom: 1.3rem;
   }
-  p{
+  p {
     display: none;
   }
   .block {
@@ -25,14 +21,15 @@ nav {
     background-color: $cor1;
   }
   .icons {
-    display: flex;
+    display: inline-flex;
+    padding-left: 2.2rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 3.3rem;
     justify-content: space-around;
     button {
-        // margin-bottom: 1.3rem;
+      // margin-bottom: 1.3rem;
       width: 5.3rem;
       height: 5.4rem;
       display: flex;
@@ -68,15 +65,18 @@ nav {
     display: flex;
     position: absolute;
     bottom: 3rem;
-    left: 2rem;
+    left: 1.7rem;
+  }
+  .sedecti {
+    display: none;
   }
   transition: 0.3s all;
   &:hover {
-    width: 22rem;
+    width: 20rem;
     border-radius: 6rem;
     .icons {
       align-items: flex-start;
-      padding-left: 2.3rem;
+      padding-left: 2.2rem;
     }
     a {
       display: flex;
@@ -91,15 +91,17 @@ nav {
         font-weight: 400;
         line-height: 2.8rem;
         letter-spacing: 0.02rem;
-        // margin-bottom: 1rem;
         padding-right: 2rem;
       }
-      transition: .3s all;
+      transition: 0.3s all;
       &:hover {
         background-color: rgba(0, 0, 0, 0.07);
         border-radius: 1rem;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.05);
       }
+    }
+    .sedecti{
+      display: unset;
     }
   }
 }

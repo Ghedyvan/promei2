@@ -60,7 +60,7 @@ main {
       margin-top: 3rem;
       padding: 1.5rem 4rem;
       border-radius: 0.8rem;
-      background: $red;
+      background: $cor1;
       color: $white;
       text-align: center;
       font-family: "Archivo", sans-serif;
@@ -97,7 +97,7 @@ main {
         justify-content: space-between;
         width: 100%;
         p {
-          color: $red;
+          color: $cor1;
           font-size: 2rem;
           font-family: "Overpass", sans-serif;
         }
@@ -141,7 +141,7 @@ main {
         margin-top: 3rem;
         padding: 1.5rem 4rem;
         border-radius: 0.8rem;
-        background: $red;
+        background: $cor1;
         color: $white;
         text-align: center;
         font-family: "Archivo", sans-serif;
@@ -152,7 +152,7 @@ main {
         margin-bottom: 4rem;
         transition: 0.3s all;
         &:hover {
-          background: $red;
+          background: $cor1;
           color: $white;
         }
       }
