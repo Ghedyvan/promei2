@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/criarcurso.css" />
+    <link rel="stylesheet" href="./css/perfil.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -49,7 +49,7 @@
           <p>Início</p>
         </a>
         <a href="./cursos.html">
-          <button  class="selected">
+          <button>
             <img src="./img/fi-rr-backpack.svg" alt="" class="imgnotselected" />
             <img
               src="./img/fi-rr-backpackselected.svg"
@@ -113,52 +113,25 @@
     </nav>
     <main>
         <div class="container">
-            <h1>Criar curso</h1>
-            <section class="s-novocurso">
+            <h1>Editar perfil</h1>
+            <section class="dados">
                 <form action="">
                 <div class="conteudo">
-                  <div class="titulo">
-                    <label for="titulocurso">Título do curso</label>
-                    <select name="titulocurso" id="titulocurso" class="titulocurso">
-                      <option value="" selected>Selecione</option>
-                      <option value="oprcomputador">Operador de computador</option>
-                      <option value="mecanicoindustrial">Mecânico industrial</option>
-                      <option value="logicaprogramacao">Lógica de programação</option>
-                      <option value="excelpro">Excel Pro</option>
-                      <option value="exceliniciante">Excel Iniciante</option>
-                      <option value="python">Python</option>
-                      <option value="frontend">Desenvolvedor front-end</option>
-                      <option value="backend">Desenvolvedor back-end</option>
-                      <option value="eletautomoveis">
-                        Eletricista de automóveis
-                      </option>
-                    </select>
+                  <div class="entrada">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" placeholder="Ghedyvan Vinícius Batista da Silva">
                   </div>
-                  <div class="turno">
-                    <label for="turno">Turno</label>
-                    <select name="turno" id="turno">
-                      <option value="" selected>Selecione</option>
-                      <option value="matutino">Matutino</option>
-                      <option value="vespertino">Vespertino</option>
-                      <option value="noturno">Noturno</option>
-                    </select>
+                  <div class="entrada">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="gvbs@ic.ufal.br">
                   </div>
-                  <div class="datainicio">
-                    <label for="datainicio">Data de início</label>
-                    <input type="date" name="datainicio" id="datainicio" />
+                  <div class="entrada">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" placeholder="Digite para confirmar alterações">
                   </div>
-                  <div class="vagas">
-                    <label for="vagas">N de vagas</label>
-                    <input type="number" name="vagas" id="vagas" placeholder="Apenas números" />
-                  </div>
-                  <div class="descricao">
-                    <label for="descricaocurso">Descrição do curso:</label>
-                    <textarea name="descricaocurso" id="" cols="30" rows="5" id="descricaocurso"></textarea>
-                  </div>
-                  <div class="cargah">
-                    <label for="carga">Carga horária</label>
-                    <input type="number" name="carga" id="carga" placeholder="Apenas números" />
-                    <button type="submit">Criar curso</button>
+                  <div class="buttons">
+                    <a href="./novasenha.html" class="leftbtn">Alterar senha</a>
+                    <button type="submit">Salvar</button>
                   </div>
                 </div>
               </form>
