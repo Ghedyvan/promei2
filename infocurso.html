@@ -24,17 +24,18 @@
   <body>
     <header>
       <div class="user">
-        <a href="./perfil.html"><button>
-          <div class="text">
-            <p>Ghedyvan</p>
-          </div>
-          <div class="arrow">
-            <img src="./img/icon/more.svg" alt="" />
-          </div>
-          <div class="divisor">
-            <img src="./img/linetop.svg" alt="" />
-          </div>
-        </button></a>
+        <a href="./perfil.html"
+          ><button>
+            <div class="text">
+              <p>Ghedyvan</p>
+            </div>
+            <div class="arrow">
+              <img src="./img/icon/more.svg" alt="" />
+            </div>
+            <div class="divisor">
+              <img src="./img/linetop.svg" alt="" />
+            </div></button
+        ></a>
         <a href="./index.html"
           ><button>
             <img src="./img/icon/logout.svg" alt="" /></button
@@ -193,11 +194,14 @@
         <section class="s-alunos">
           <h1>Alunos do curso</h1>
           <div class="filter">
-            <form action="">
+            <form action="" class="formulario1">
               <div class="nome">
                 <label for="nome">Nome</label>
                 <input type="text" />
               </div>
+              <button type="button" class="btn-adicionar abrirModalTwo">
+                Criar aluno
+              </button>
               <button>Buscar</button>
             </form>
             <div class="table">
@@ -206,55 +210,70 @@
                 <table>
                   <thead>
                     <tr>
-                      <th> id </th>
-                      <th> Nome </th>
-                      <th> Curso </th>
-                      <th> Início </th>
-                      <th> Duração </th>
-                      <th> Ações </th>
+                      <th>id</th>
+                      <th>Nome</th>
+                      <th>Curso</th>
+                      <th>Início</th>
+                      <th>Duração</th>
+                      <th>Ações</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td> 1 </td>
-                      <td> Ghedyvan Vinícius Batista da Silva </td>
-                      <td> Programação Web </td>
-                      <td> 20/02/2022 </td>
-                      <td> 80 horas </td>
+                      <td>1</td>
+                      <td>Ghedyvan Vinícius Batista da Silva</td>
+                      <td>Programação Web</td>
+                      <td>20/02/2022</td>
+                      <td>80 horas</td>
                       <td>
-                        <button class="abrirModal"><img src="./img/fi-rr-user.svg" alt=""></button>
+                        <button class="abrirModal">
+                          <img src="./img/fi-rr-user.svg" alt="" />
+                        </button>
                         <!-- <button><img src="./img/fi-rr-file-add.svg" alt=""></button> -->
                         <label class="file-upload">
-                          <img src="./img/fi-rr-file-add.svg" alt="Botão com Imagem">
-                          <input type="file" class="file-input">
+                          <img
+                            src="./img/fi-rr-file-add.svg"
+                            alt="Botão com Imagem"
+                          />
+                          <input type="file" class="file-input" />
                         </label>
                       </td>
                     </tr>
                     <tr>
-                      <td> 2 </td>
-                      <td> Ghedyvan Vinícius Batista da Silva </td>
-                      <td> Excel avançado </td>
-                      <td> 03/11/2022 </td>
-                      <td> 25 horas </td>
+                      <td>2</td>
+                      <td>Ghedyvan Vinícius Batista da Silva</td>
+                      <td>Excel avançado</td>
+                      <td>03/11/2022</td>
+                      <td>25 horas</td>
                       <td>
-                        <button class="abrirModal"><img src="./img/fi-rr-user.svg" alt=""></button>
+                        <button class="abrirModal">
+                          <img src="./img/fi-rr-user.svg" alt="" />
+                        </button>
                         <label class="file-upload">
-                          <img src="./img/fi-rr-file-add.svg" alt="Botão com Imagem">
-                          <input type="file" class="file-input">
+                          <img
+                            src="./img/fi-rr-file-add.svg"
+                            alt="Botão com Imagem"
+                          />
+                          <input type="file" class="file-input" />
                         </label>
                       </td>
                     </tr>
                     <tr>
-                      <td> 3 </td>
-                      <td> Ghedyvan Vinícius Batista da Silva </td>
-                      <td> Python iniciante </td>
-                      <td> 12/04/2023 </td>
-                      <td> 4 horas </td>
+                      <td>3</td>
+                      <td>Ghedyvan Vinícius Batista da Silva</td>
+                      <td>Python iniciante</td>
+                      <td>12/04/2023</td>
+                      <td>4 horas</td>
                       <td>
-                        <button class="abrirModal"><img src="./img/fi-rr-user.svg" alt=""></button>
+                        <button class="abrirModal">
+                          <img src="./img/fi-rr-user.svg" alt="" />
+                        </button>
                         <label class="file-upload">
-                          <img src="./img/fi-rr-file-add.svg" alt="Botão com Imagem">
-                          <input type="file" class="file-input">
+                          <img
+                            src="./img/fi-rr-file-add.svg"
+                            alt="Botão com Imagem"
+                          />
+                          <input type="file" class="file-input" />
                         </label>
                       </td>
                     </tr>
@@ -264,64 +283,116 @@
             </div>
             <div id="myModal" class="modal">
               <div class="modal-content">
-                  <span class="close" onclick="fecharModal()">&times;</span>
-                  <h2>Informações do Usuário</h2>
-                  <table>
-                      <tr>
-                          <td>Nome</td>
-                          <td>Ghedyvan Vinícius Batista da Silva</td>
-                      </tr>
-                      <tr>
-                          <td>Email</td>
-                          <td>gvbs@ic.ufal.br</td>
-                      </tr>
-                      <tr>
-                          <td>Telefone</td>
-                          <td>(82) 98237-1442</td>
-                      </tr>
-                      <tr>
-                          <td>Idade</td>
-                          <td>22 anos</td>
-                      </tr>
-                      <tr>
-                          <td>Data de Nascimento</td>
-                          <td>20/02/2001</td>
-                      </tr>
-                      <tr>
-                          <td>Nome da Mãe</td>
-                          <td>Fulana fulana fulana</td>
-                      </tr>
-                      <tr>
-                          <td>Endereço</td>
-                          <td>Lot. Rui Palmeira, 579</td>
-                      </tr>
-                      <tr>
-                          <td>CPF</td>
-                          <td>123.456.789-00</td>
-                      </tr>
-                      <tr>
-                          <td>RG</td>
-                          <td>987654321</td>
-                      </tr>
-                      <tr>
-                          <td>Experiência</td>
-                          <td>Sim</td>
-                      </tr>
-                      <tr>
-                        <td>Comprovante de residência</td>
-                        <td>
-                            <button onclick="baixarDocumento('documento1.pdf')">Aperte para baixar</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Foto RG</td>
-                        <td>
-                            <button onclick="baixarDocumento('documento1.pdf')">Aperte para baixar</button>
-                        </td>
-                      </tr>
-                  </table>
+                <span class="close">&times;</span>
+                <h2>Informações do Usuário</h2>
+                <table>
+                  <tr>
+                    <td>Nome</td>
+                    <td>Ghedyvan Vinícius Batista da Silva</td>
+                  </tr>
+                  <tr>
+                    <td>Email</td>
+                    <td>gvbs@ic.ufal.br</td>
+                  </tr>
+                  <tr>
+                    <td>Telefone</td>
+                    <td>(82) 98237-1442</td>
+                  </tr>
+                  <tr>
+                    <td>Idade</td>
+                    <td>22 anos</td>
+                  </tr>
+                  <tr>
+                    <td>Data de Nascimento</td>
+                    <td>20/02/2001</td>
+                  </tr>
+                  <tr>
+                    <td>Nome da Mãe</td>
+                    <td>Fulana fulana fulana</td>
+                  </tr>
+                  <tr>
+                    <td>Endereço</td>
+                    <td>Lot. Rui Palmeira, 579</td>
+                  </tr>
+                  <tr>
+                    <td>CPF</td>
+                    <td>123.456.789-00</td>
+                  </tr>
+                  <tr>
+                    <td>RG</td>
+                    <td>987654321</td>
+                  </tr>
+                  <tr>
+                    <td>Experiência</td>
+                    <td>Sim</td>
+                  </tr>
+                  <tr>
+                    <td>Comprovante de residência</td>
+                    <td>
+                      <button onclick="baixarDocumento('documento1.pdf')">
+                        Aperte para baixar
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Foto RG</td>
+                    <td>
+                      <button onclick="baixarDocumento('documento1.pdf')">
+                        Aperte para baixar
+                      </button>
+                    </td>
+                  </tr>
+                </table>
               </div>
             </div>
+            <div id="myModalTwo" class="modalTwo">
+              <div class="modal-content">
+                <span class="closeTwo" onclick="closeModal()">&times;</span>
+                <h2>Informações do Usuário</h2>
+                <form action="">
+                  <table>
+                    <tr>
+                      <td>Nome</td>
+                      <td><input type="text" name="" id="" /></td>
+                    </tr>
+                    <tr>
+                      <td>Email</td>
+                      <td><input type="email" name="" id="" /></td>
+                    </tr>
+                    <tr>
+                      <td>Telefone</td>
+                      <td><input type="tel" name="" id="" /></td>
+                    </tr>
+                    <tr>
+                      <td>Idade</td>
+                      <td><input type="number" name="" id="" /></td>
+                    </tr>
+                    <tr>
+                      <td>Data de Nascimento</td>
+                      <td><input type="date" name="" id="" /></td>
+                    </tr>
+                    <tr>
+                      <td>Nome da Mãe</td>
+                      <td><input type="text" name="" id="" /></td>
+                    </tr>
+                    <tr>
+                      <td>Endereço</td>
+                      <td><input type="text" name="" id="" /></td>
+                    </tr>
+                    <tr>
+                      <td>CPF</td>
+                      <td><input type="text" name="" id="" /></td>
+                    </tr>
+                    <tr>
+                      <td>RG</td>
+                      <td><input type="text" name="" id="" /></td>
+                    </tr>
+                  </table>
+                  <div class="botaozinho">
+                    <button type="submit">Criar</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </section>
@@ -330,27 +401,53 @@
   </body>
   <script>
     // Referências aos elementos do DOM
-    const modal = document.querySelector('.modal');
-    const abrirModalBtn = document.querySelectorAll('.abrirModal');
-    const closeBtn = modal.querySelector('.close');
+    const modal = document.querySelector(".modal");
+    const modalTwo = document.querySelector(".modalTwo");
+    const abrirModalBtn = document.querySelectorAll(".abrirModal");
+    const abrirModalBtnTwo = document.querySelectorAll(".abrirModalTwo");
+    const closeBtn = modal.querySelector(".close");
+    const closeBtnTwo = modal.querySelector(".closeTwo");
 
     // Mostrar o modal ao clicar no botão "Detalhes"
-    abrirModalBtn.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            modal.style.display = 'block';
-        });
+    abrirModalBtn.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        modal.style.display = "block";
+      });
+    });
+
+    // Mostrar o modal ao clicar no botão "Criar aluno"
+    abrirModalBtnTwo.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        modalTwo.style.display = "block";
+      });
     });
 
     // Fechar o modal ao clicar no botão de fechar (X)
-    closeBtn.addEventListener('click', function() {
-        modal.style.display = 'none';
+    closeBtn.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+
+    // Fechar o modal ao clicar no botão de fechar (X)
+    closeBtnTwo.addEventListener("click", function () {
+      modalTwo.style.display = "none";
+    });
+
+    function closeModal() {
+      modalTwo.style.display = "none";
+    }
+
+    // Fechar o modal se o usuário clicar fora da área do modal
+    window.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
     });
 
     // Fechar o modal se o usuário clicar fora da área do modal
-    window.addEventListener('click', function(event) {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
+    window.addEventListener("click", function (event) {
+      if (event.target === modal2) {
+        modal2.style.display = "none";
+      }
     });
   </script>
 </html>
